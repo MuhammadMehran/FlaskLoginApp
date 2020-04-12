@@ -1,0 +1,53 @@
+{% extends "layout.jinja2" %}
+
+{% block pagestyles %}
+    <link href="{{ url_for('static', filename='dist/css/account.css') }}" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/style.css') }}" >
+{% endblock %}
+
+{% block content %}
+  
+   <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='dist/img/logo.png') }}" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"><a href="{{ url_for('auth_bp.login') }}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Log In</a></li>
+                                <li class="nav-item"><a href="{{ url_for('auth_bp.signup') }}" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="bg-gradient" id="home">
+        <div class="container mt-5">
+            <h1>Placeholder Heading</h1>
+            <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in dictum arcu, ut sodales orci. Nullam id ipsum diam. Morbi vel purus vitae quam pharetra vulputate in eget velit. Mauris et pretium diam, ac ultricies massa. Sed vel nisl erat. Curabitur molestie molestie justo, a hendrerit nunc luctus ut. Proin vel fringilla velit. Vestibulum auctor sem at risus venenatis, non porttitor libero consequat. Integer eu mauris dictum, pellentesque dui vitae, posuere metus. Proin ornare vestibulum arcu quis pellentesque. Aenean ut sapien orci. Donec felis lacus, fermentum venenatis blandit vel, sollicitudin sit amet eros. Aenean sagittis tristique enim sed dictum. Donec nec venenatis ligula, id auctor tellus. Vivamus vel leo a ante accumsan fermentum et ut metus. Ut tempor auctor turpis, posuere interdum lorem.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        
+    </header>
+
+    <script src="{{ url_for('static', filename='dist/js/script.js') }}"></script>
+{% endblock %}
